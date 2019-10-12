@@ -1,27 +1,40 @@
-//isEven
-function isEven (num){
-	return num % 2 ===0;
-}
-
-//factorial
-function factorial(num){
-
-	var result = 1;
-
-	for(var i = 2; i <= num; i++){
-		result *= i;
+function printReverse(arr){
+	for(var i = arr.length - 1; i >= 0; i--) {
+		console.log(arr[i]);
 	}
-	return result;
 }
 
-function kebabToSnake(str) {
+printReverse ( [3,6,2,5]);
 
-	var newStr = str.replace(/-/g , "_");
+//*** isUniform() ***
 
-	return newStr;
-
-
+function isUniform(arr){
+	var first = arr[0];
+	for(var i = 0; i < arr.length; i++){
+		if(arr[i] !== first){
+			return false;
+		}
+	}
+	return true;
 }
 
+// *** sumArray() ***
 
+function sumArray(arr){
+	var total = 0;
+	arr.forEach(function(element){
+		total += element;
+	})
+	return total;
+}
 
+// *** max() ***
+function max(arr){
+	var max = arr[0];
+	for(var i = 1; i < arr.length; i++){
+		if(arr[i] > max){
+			max = arr[i];
+		}
+	}
+	return max;
+}
